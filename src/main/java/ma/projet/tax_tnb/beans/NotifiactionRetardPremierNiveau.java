@@ -9,7 +9,7 @@ public class NotifiactionRetardPremierNiveau {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private int annee;
-    // private String TRIM;       ANSWLO PROF
+    private String TRIM;
 
 
 

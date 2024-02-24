@@ -8,6 +8,7 @@ public class Categorie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String code;
     private String Categorie1="zoneVilla" ;
     private String Categorie2="zoneimeuble" ;
     private String Categorie3="autre" ;

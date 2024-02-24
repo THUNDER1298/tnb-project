@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 
 
 @Entity
-public class NotifiactionRetardPremierNiveauDetail {
+public class NotifRPNDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String code;
     // private String TRIM;       ANSWLO PROF
 
 

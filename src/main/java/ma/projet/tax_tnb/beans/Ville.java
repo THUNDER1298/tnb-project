@@ -11,6 +11,7 @@ public class Ville {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String code;
     private String libelle ;
 
 

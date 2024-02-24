@@ -10,6 +10,7 @@ public class TaxTnb {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String code;
     private int annee;
     private LocalDateTime datePresentation;
     private int nombreMoisRetard;
