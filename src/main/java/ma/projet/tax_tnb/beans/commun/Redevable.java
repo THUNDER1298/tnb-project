@@ -1,4 +1,4 @@
-package ma.projet.tax_tnb.beans;
+package ma.projet.tax_tnb.beans.commun;
 
 import jakarta.persistence.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +12,10 @@ public class Redevable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String Cin;
-    private String Nom;
-    private String NumTel;
-    private String Adress;
+    private String cin;
+    private String nom;
+    private String numTel;
+    private String adress;
 
 
 
@@ -28,34 +28,34 @@ public class Redevable {
     }
 
     public String getCin() {
-        return Cin;
+        return cin;
     }
 
     public void setCin(String cin) {
-        Cin = cin;
+        this.cin = cin;
     }
 
     public String getNom() {
-        return Nom;
+        return nom;
     }
 
     public void setNom(String nom) {
-        Nom = nom;
+        this.nom = nom;
     }
 
     public String getNumTel() {
-        return NumTel;
+        return numTel;
     }
 
     public void setNumTel(String numTel) {
-        NumTel = numTel;
+        this.numTel = numTel;
     }
 
     public String getAdress() {
-        return Adress;
+        return adress;
     }
 
     public void setAdress(String adress) {
-        Adress = adress;
+        this.adress = adress;
     }
 }

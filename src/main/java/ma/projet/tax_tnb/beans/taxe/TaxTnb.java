@@ -1,7 +1,10 @@
-package ma.projet.tax_tnb.beans;
+package ma.projet.tax_tnb.beans.taxe;
 
 import jakarta.persistence.*;
+import ma.projet.tax_tnb.beans.commun.Redevable;
+import ma.projet.tax_tnb.beans.commun.Terrain;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 
@@ -14,17 +17,12 @@ public class TaxTnb {
     private int annee;
     private LocalDateTime datePresentation;
     private int nombreMoisRetard;
-    private Long montantBase;
-    private Long montantRetardPremierMois;
-    private Long montantRetardAutreMois;
-    private Long montantTotal;
-
-
-
+    private BigDecimal montantBase;
+    private BigDecimal montantRetardPremierMois;
+    private BigDecimal montantRetardAutreMois;
+    private BigDecimal montantTotal;
     @ManyToOne
-    private Redevable redevable;
-    @ManyToOne
-    private Terrain terrain;
+    private TauxTnb tauxTnb;
 
     public Long getId() {
         return id;
@@ -32,6 +30,14 @@ public class TaxTnb {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public int getAnnee() {
@@ -58,36 +64,44 @@ public class TaxTnb {
         this.nombreMoisRetard = nombreMoisRetard;
     }
 
-    public Long getMontantBase() {
+    public BigDecimal getMontantBase() {
         return montantBase;
     }
 
-    public void setMontantBase(Long montantBase) {
+    public void setMontantBase(BigDecimal montantBase) {
         this.montantBase = montantBase;
     }
 
-    public Long getMontantRetardPremierMois() {
+    public BigDecimal getMontantRetardPremierMois() {
         return montantRetardPremierMois;
     }
 
-    public void setMontantRetardPremierMois(Long montantRetardPremierMois) {
+    public void setMontantRetardPremierMois(BigDecimal montantRetardPremierMois) {
         this.montantRetardPremierMois = montantRetardPremierMois;
     }
 
-    public Long getMontantRetardAutreMois() {
+    public BigDecimal getMontantRetardAutreMois() {
         return montantRetardAutreMois;
     }
 
-    public void setMontantRetardAutreMois(Long montantRetardAutreMois) {
+    public void setMontantRetardAutreMois(BigDecimal montantRetardAutreMois) {
         this.montantRetardAutreMois = montantRetardAutreMois;
     }
 
-    public Long getMontantTotal() {
+    public BigDecimal getMontantTotal() {
         return montantTotal;
     }
 
-    public void setMontantTotal(Long montantTotal) {
+    public void setMontantTotal(BigDecimal montantTotal) {
         this.montantTotal = montantTotal;
+    }
+
+    public TauxTnb getTauxTnb() {
+        return tauxTnb;
+    }
+
+    public void setTauxTnb(TauxTnb tauxTnb) {
+        this.tauxTnb = tauxTnb;
     }
 
     public Redevable getRedevable() {
@@ -105,5 +119,13 @@ public class TaxTnb {
     public void setTerrain(Terrain terrain) {
         this.terrain = terrain;
     }
+
+    @ManyToOne
+    private Redevable redevable;
+    @ManyToOne
+    private Terrain terrain;
+
+
+
 }
 

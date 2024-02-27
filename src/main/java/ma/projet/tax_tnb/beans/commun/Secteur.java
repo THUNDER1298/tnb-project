@@ -1,18 +1,26 @@
-package ma.projet.tax_tnb.beans;
+package ma.projet.tax_tnb.beans.commun;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
 @Entity
-public class Ville {
+public class Secteur {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String code;
     private String libelle ;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    @ManyToOne
+    private Ville ville;
 
 
 
@@ -32,8 +40,12 @@ public class Ville {
         this.libelle = libelle;
     }
 
-
-
-
+    public Ville getVille() {
+        return ville;
     }
+
+    public void setVille(Ville ville) {
+        this.ville = ville;
+    }
+}
 

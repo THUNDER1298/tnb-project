@@ -1,6 +1,6 @@
 package ma.projet.tax_tnb.dao;
 
-import ma.projet.tax_tnb.beans.Quartie;
+import ma.projet.tax_tnb.beans.commun.Quartie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

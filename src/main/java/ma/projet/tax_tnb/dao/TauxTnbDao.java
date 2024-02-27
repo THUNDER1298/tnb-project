@@ -1,6 +1,6 @@
 package ma.projet.tax_tnb.dao;
 
-import ma.projet.tax_tnb.beans.TauxTnb;
+import ma.projet.tax_tnb.beans.taxe.TauxTnb;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TauxTnbDao extends JpaRepository<TauxTnb, Long> {

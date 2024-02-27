@@ -1,4 +1,4 @@
-package ma.projet.tax_tnb.beans;
+package ma.projet.tax_tnb.beans.commun;
 
 import jakarta.persistence.*;
 
@@ -8,9 +8,9 @@ public class Terrain {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String Ref;
-    private double Superfecie;
-    private String ComplementAdress;
+    private String ref;
+    private double superfecie;
+    private String complementAdress;
 
 
     @ManyToOne
@@ -29,30 +29,28 @@ public class Terrain {
     }
 
     public String getRef() {
-        return Ref;
+        return ref;
     }
 
     public void setRef(String ref) {
-        Ref = ref;
+        this.ref = ref;
     }
 
     public double getSuperfecie() {
-        return Superfecie;
+        return superfecie;
     }
 
     public void setSuperfecie(double superfecie) {
-        Superfecie = superfecie;
+        this.superfecie = superfecie;
     }
 
-
     public String getComplementAdress() {
-        return ComplementAdress;
+        return complementAdress;
     }
 
     public void setComplementAdress(String complementAdress) {
-        ComplementAdress = complementAdress;
+        this.complementAdress = complementAdress;
     }
-
 
     public Rue getRue() {
         return rue;

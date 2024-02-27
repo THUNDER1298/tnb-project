@@ -1,6 +1,6 @@
 package ma.projet.tax_tnb.dao;
 
-import ma.projet.tax_tnb.beans.Terrain;
+import ma.projet.tax_tnb.beans.commun.Terrain;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 ;
