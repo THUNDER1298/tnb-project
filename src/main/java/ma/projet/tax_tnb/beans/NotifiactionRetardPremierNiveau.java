@@ -10,6 +10,7 @@ public class NotifiactionRetardPremierNiveau {
     private Long id;
     private int annee;
     private String TRIM;
+    private String code;
 
 
 

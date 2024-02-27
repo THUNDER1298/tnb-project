@@ -10,6 +10,7 @@ public class TauxTnb {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String code;
     public int montantParMetreCarre;
     public int montantParMetreCarrePremierMois;
     public int montantParMetreCarreAutreMois;

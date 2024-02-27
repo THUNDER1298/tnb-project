@@ -11,6 +11,7 @@ public class Rue {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String libelle ;
+    private String code;
     @ManyToOne
     private Quartie quartie;
 
