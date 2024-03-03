@@ -15,8 +15,16 @@ public class Redevable {
     private String cin;
     private String nom;
     private String numTel;
-    private String adress;
+    private String email;
+    private String adresse;
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 
     public Long getId() {
@@ -51,11 +59,11 @@ public class Redevable {
         this.numTel = numTel;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 }
