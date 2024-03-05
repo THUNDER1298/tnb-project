@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 
 @Entity
-public class NotifiactionRetardDeuxeimeNiveau {
+public class NotificationRetardDeuxiemeNiveau {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

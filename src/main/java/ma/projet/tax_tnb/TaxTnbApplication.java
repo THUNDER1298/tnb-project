@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TaxTnbApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(TaxTnbApplication.class, args);
     }
 

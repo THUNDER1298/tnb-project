@@ -1,7 +1,8 @@
-package ma.projet.tax_tnb.service;
+package ma.projet.tax_tnb.service.implimentation;
 
-import ma.projet.tax_tnb.bean.Redevable;
+import ma.projet.tax_tnb.beans.commun.Redevable;
 import ma.projet.tax_tnb.dao.RedevableDao;
+import ma.projet.tax_tnb.service.facade.RedevableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +28,8 @@ public class RedevableServiceImpl implements RedevableService {
         return deleteByCin(cin);
     }
 
-    public int save(Redevable redevable){
+
+    public int save (Redevable redevable){
         if(findByCin(redevable.getCin()) != null){
             return -1;
         }else{

@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @Entity
-public class NotifiactionRetardTroisiemeNiveauDetail {
+public class NotificationRetardTroisiemeNiveau {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -18,7 +18,7 @@ public class NotifiactionRetardTroisiemeNiveauDetail {
     @OneToMany
     private List<Redevable> redevable;
     @ManyToOne
-    private NotifiactionRetardDeuxeimeNiveau notifiactionRetardDeuxeimeNiveauNiveau;
+    private NotificationRetardDeuxiemeNiveau notificationRetardDeuxeimeNiveauNiveau;
 
     public String getCode() {
         return code;
@@ -60,12 +60,12 @@ public class NotifiactionRetardTroisiemeNiveauDetail {
         this.redevable = redevable;
     }
 
-    public NotifiactionRetardDeuxeimeNiveau getNotifiactionRetardDeuxeimeNiveauNiveau() {
-        return notifiactionRetardDeuxeimeNiveauNiveau;
+    public NotificationRetardDeuxiemeNiveau getNotifiactionRetardDeuxeimeNiveauNiveau() {
+        return notificationRetardDeuxeimeNiveauNiveau;
     }
 
-    public void setNotifiactionRetardDeuxeimeNiveauNiveau(NotifiactionRetardDeuxeimeNiveau notifiactionRetardDeuxeimeNiveauNiveau) {
-        this.notifiactionRetardDeuxeimeNiveauNiveau = notifiactionRetardDeuxeimeNiveauNiveau;
+    public void setNotifiactionRetardDeuxeimeNiveauNiveau(NotificationRetardDeuxiemeNiveau notificationRetardDeuxeimeNiveauNiveau) {
+        this.notificationRetardDeuxeimeNiveauNiveau = notificationRetardDeuxeimeNiveauNiveau;
     }
 }
 

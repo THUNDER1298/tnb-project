@@ -8,13 +8,14 @@ import java.time.LocalDateTime;
 
 
 @Entity
-public class NotifiactionRetardPremierNiveau {
+public class NotificationRetardPremierNiveau {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String code;
     private LocalDateTime dateNotification;
     private int annee;
+
     private String description;
     @ManyToOne
     private Redevable redevable;
@@ -59,6 +60,22 @@ public class NotifiactionRetardPremierNiveau {
 
     public void setTerrain(Terrain terrain) {
         this.terrain = terrain;
+    }
+
+    public LocalDateTime getDateNotification() {
+        return dateNotification;
+    }
+
+    public void setDateNotification(LocalDateTime dateNotification) {
+        this.dateNotification = dateNotification;
+    }
+
+    public int getAnnee() {
+        return annee;
+    }
+
+    public void setAnnee(int annee) {
+        this.annee = annee;
     }
 }
 

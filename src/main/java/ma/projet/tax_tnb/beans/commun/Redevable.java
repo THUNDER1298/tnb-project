@@ -1,10 +1,6 @@
 package ma.projet.tax_tnb.beans.commun;
 
 import jakarta.persistence.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 
 @Entity
