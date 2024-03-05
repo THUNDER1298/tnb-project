@@ -6,11 +6,11 @@ import ma.projet.tax_tnb.beans.notification.NotificationRetardPremierNiveau;
 
 public interface NotificationRetardPremierNiveauService{
 
+    int save(NotificationRetardPremierNiveau notification);
+
     NotificationRetardPremierNiveau findByCode(String code);
 
     NotificationRetardPremierNiveau findByAnnee(int annee);
-
-    int deleteByAnnee(int annee);
 
     int deleteByCode(String code);
 

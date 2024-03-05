@@ -15,8 +15,6 @@ public interface NotificationRetardPremierNiveauDao extends JpaRepository<Notifi
 
     int deleteByCode(String code);
 
-    int deleteByAnnee(int annee);
-
     Redevable findByRedevableCode(String code);
 
     Terrain findByTerrainRef(String ref);

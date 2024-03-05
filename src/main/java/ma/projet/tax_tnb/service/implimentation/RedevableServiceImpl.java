@@ -29,6 +29,7 @@ public class RedevableServiceImpl implements RedevableService {
     }
 
 
+    @Override
     public int save (Redevable redevable){
         if(findByCin(redevable.getCin()) != null){
             return -1;

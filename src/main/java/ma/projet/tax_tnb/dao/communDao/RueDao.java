@@ -1,4 +1,4 @@
-package ma.projet.tax_tnb.dao;
+package ma.projet.tax_tnb.dao.communDao;
 
 
 import ma.projet.tax_tnb.beans.commun.Quartie;
